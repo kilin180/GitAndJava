@@ -10,7 +10,7 @@ public class UdpReceiveExample extends Thread {
 		Thread thread = new Thread() {
 			@Override
 			public void run() {
-				System.out.println("[수신 시작]");
+				System.out.println("[수신 시자아악]");
 				try {
 					while(true) {
 						DatagramPacket packet = new DatagramPacket(new byte[100], 100);
