@@ -10,17 +10,18 @@ public class UdpReceiveExample extends Thread {
 		Thread thread = new Thread() {
 			@Override
 			public void run() {
-				System.out.println("[¼ö½Å ½ÃÀÚ¾Æ¾Ç]");
+				System.out.println("[ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¾Æ¾ï¿½]");
 				try {
 					while(true) {
 						DatagramPacket packet = new DatagramPacket(new byte[100], 100);
 						datagramSocket.receive(packet);
 						
 						String data = new String(packet.getData(), 0, packet.getLength(), "UTF-8");
-						System.out.println("[¹ŞÀº ³»¿ë: "  + packet.getSocketAddress() + "] " + data);
+						System.out.println("[ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½: "  + packet.getSocketAddress() + "] " + data);
 					}
 				} catch (Exception e) {
-					System.out.println("[¼ö½Å Á¾·á]");
+					System.out.println("[ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½]");
+					System.out.println("utf-8ë¡¤ ì¸ì½”ë”©í•´ì„œ ë³´ë‚´ì¤˜ ë‹¤ê¹¨ì§„ë‹¹");
 				}
 			}			
 		};

@@ -8,10 +8,10 @@ public class UdpSendExample {
 	public static void main(String[] args) throws Exception {
 		DatagramSocket datagramSocket = new DatagramSocket();
 		
-		System.out.println("[¹ß½Å ½ÃÀÛ]");
+		System.out.println("[ï¿½ß½ï¿½ ï¿½ï¿½ï¿½ï¿½]");
 		
 		for(int i=1; i<3; i++) {
-			String data = "¸Þ½ÃÁö" + i;
+			String data = "ï¿½Þ½ï¿½ï¿½ï¿½" + i;
 			byte[] byteArr = data.getBytes("UTF-8");
 			DatagramPacket packet = new DatagramPacket(
 				byteArr, byteArr.length, 
@@ -19,11 +19,12 @@ public class UdpSendExample {
 			);
 			
 			datagramSocket.send(packet);
-			System.out.println("[º¸³½ ¹ÙÀÌÆ® ¼ö]: " + byteArr.length + " bytes");
+			System.out.println("[ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½]: " + byteArr.length + " bytes");
 		}
 		
-		System.out.println("[¹ß½Å Á¾·á]");
+		System.out.println("[ï¿½ß½ï¿½ ï¿½ï¿½ï¿½ï¿½]");
 		
 		datagramSocket.close();
-	}
+		s
+}
 }
